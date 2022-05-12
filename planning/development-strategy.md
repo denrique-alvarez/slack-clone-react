@@ -74,7 +74,7 @@ This will be developed on the branch '2-add-channel'.
 
 This will be developed on the branch '3-messages'.
 
-<!-- each issue created from this section will have the `for: user story` label -->
+<!-- each issue created from this section will have the `for: Users can see other users messages` label -->
 
 > "As a user I can see the author of each message so I can follow the conversation and the info provided by each participant."
 
@@ -95,7 +95,7 @@ This will be developed on the branch '3-messages'.
 
 This will be developed on the branch '4-message-time'.
 
-<!-- each issue created from this section will have the `for: user story` label -->
+<!-- each issue created from this section will have the `for: Users can see the time and date when a message was sent` label -->
 
 > "As a user I can see the author of each message so I can follow the conversation and the info provided by each participant."
 
@@ -109,7 +109,7 @@ This will be developed on the branch '4-message-time'.
 
 This will be developed on the branch '5-send-messages'.
 
-<!-- each issue created from this section will have the `for: user story` label -->
+<!-- each issue created from this section will have the `for: Users can send messages` label -->
 
 > "As a user I can send messages to interact with other users."
 
@@ -141,7 +141,7 @@ This will be developed on the branch '5-send-messages'.
 
 This will be developed on the branch '6-user-name'.
 
-<!-- each issue created from this section will have the `for: user story` label -->
+<!-- each issue created from this section will have the `for: Users can set their username` label -->
 
 > "As a user I can set my own username so others can identify me and I can identify others throughout the conversation."
 
@@ -157,3 +157,8 @@ This will be developed on the branch '6-user-name'.
 
 - User creates their username on load
   - [ ] after loading the page's content there is pop-up asking to create the user's name
+
+### Logic: Users can set their username
+
+- Each user is stored in the data base
+  - [ ] there is an api call that creates a user object
