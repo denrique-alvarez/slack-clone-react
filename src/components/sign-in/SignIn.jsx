@@ -1,9 +1,11 @@
+import './SignIn.css';
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export const SignIn = () => {
   // track and save the username value
-  const [userName, setUsername] = useState("");
+  const [userName, setUsername] = useState("Visitor" + (Math.ceil(Math.random() * 10000)));
   // update the username with the input from the user
   const userInput = (event) => {
     setUsername(event.target.value);
@@ -29,12 +31,14 @@ export const SignIn = () => {
   };
 
   return (
-    <>
+    <div className='create-user-form'>
+      <h1>Slack Clone</h1>
+      <h3>Create your Username</h3>
       <input value={userName} onChange={userInput}></input>
 
       <Link to={`/chat/${userName}`} state={userName}>
-        <button onClick={postUser}>Button</button>
+        <button onClick={postUser}>Create User</button>
       </Link>
-    </>
+    </div>
   );
 };
