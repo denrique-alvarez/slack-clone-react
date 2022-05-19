@@ -1,18 +1,23 @@
+// Must run the following command to enable routes: npm i -D react-router-dom.
+// Import routes to set components as pages on navigation.
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Import Login and general container components.
 import './App.css';
 import { Container } from './components/container/Container.jsx'
-import { Login } from './components/login/login';
+import { SignIn } from './components/sign-in/SignIn.jsx';
 
 function App() {
   return (
     <>
       <Router>
+        {/* Routes is embedded in the app div and   */}
         <div className="App">
           <Routes>
-            <Route path="/" element={<Login />} />
+            {/* Pass the path and element the corresponding component that would be rendered to a full page as props */}
+            <Route path="/" element={<SignIn />} />
             <Route path="/chat/:id" element={<Container />} />
-            </Routes>
+          </Routes>
         </div>
       </Router>
     </>
