@@ -1,7 +1,10 @@
-
+import { ChannelList } from "./channels/channel-list/ChannelList";
 
 export const Container = () => {
   return (
-    <h1>Hello from the general container!</h1>
-  )
-}
+    <>
+      <h1>Slack Clone</h1>
+      <ChannelList />
+    </>
+  );
+};

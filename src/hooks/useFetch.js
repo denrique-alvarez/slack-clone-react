@@ -9,13 +9,13 @@ const useFetch = (url, message) => {
   // useEffect to run fetching function every time url or message arguments are updated.
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true)
-
+      setLoading(true);
       try {
-        const response = await fetch(encodeURI(url));
+        const response = await fetch(url);
         const json = await response.json();
 
         setData(json);
+        setLoading(false);
       } catch (error) {
         setError(error);
         setLoading(false);
@@ -23,10 +23,10 @@ const useFetch = (url, message) => {
     };
     fetchData();
   }, [url, message]);
-
   // return data, error and loading status as object
   return { data, error, loading };
 };
+
 
 // export function
 export default useFetch;
